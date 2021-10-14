@@ -24,6 +24,7 @@ body{
     height: 100%;
     width: 100%;
     background: var(--clr-body-bg);
+    color: var(--clr-text-dark)
 }
 
 html {
@@ -31,8 +32,22 @@ html {
     font-size: 1rem;
 }
 
+.wrapper {
+    padding: 0.9rem 7%;
+}
+
+.nav svg,
+.initial svg {
+    width:24px;
+    height:24px;
+    fill: var(--clr-text-dark);
+}
+
+/*header*/
+
 header {
     position: fixed;
+    top: 0;
     width: 100%;
 }
 
@@ -40,7 +55,6 @@ header .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.9rem 7%;
     background: var(--clr-header-bg);
 }
 
@@ -49,11 +63,78 @@ h1 {
     color: var(--clr-text-dark);
 }
 
-.nav svg {
-    width:24px;
-    height:24px;
+/* main*/
+
+.main {
+    position: relative;
+    top: 6rem;
 }
 
-#header-menu {
-    fill: var(--clr-text-dark);
+.initial h3 {
+    text-align: center;
 }
+
+.dash-box {
+    margin: 2rem auto;
+    width: 75%;
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    border: 2px dashed var(--clr-text-dark);
+}
+
+/* current list*/
+
+.current-list h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 1.5rem;
+}
+
+.current-list {
+    position: absolute;
+    top: -0.5rem;
+    width: 86%;
+    max-width: 600px;
+    background: var(--clr-item-bg);
+}
+
+.list-title {
+    padding: 1rem 1.5rem ;
+    background: var(--clr-list-title-bg);
+    color: var(--clr-text-bright);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-title span {
+    font-size: 0.8rem;
+}
+
+.list-title span > span {
+    font-size: 1rem;
+}
+
+
+
+.category-title {
+    font-size: 1.35rem;
+    font-weight: 500;  
+    padding: 0.7rem 1.5rem;
+    background: var(--clr-category-title-bg);
+    color: var(--clr-text-bright);  
+    border-bottom: 2px solid var(--clr-border-dark);
+}
+
+.category ul {
+    list-style: none;
+    margin-left: -2.5rem;
+}
+
+li.item {
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 0.7rem 1.5rem;
+}
+

@@ -14,28 +14,65 @@
         <div class="wrapper">
             <h1 class="logo">EZ List</h1>
             <nav class="nav">
-                   <svg><use href="#header-menu"></use></svg>       
+                   <svg><use href="#menu-header"></use></svg>       
             </nav>
         </div>
     </header>
     <main class="main">
         <div class="wrapper">
-
+            <div class="initial">
+                <div class="create-new-list">
+                    <h3>Create a new list</h3>
+                    <div class="dash-box">
+                        <svg><use href="#plus-initial"></use></svg>
+                    </div>
+                </div>
+                <div class="select-existing-list">
+                    <h3>or select an existing list</h3>
+                    <div class="dash-box">
+                        <svg><use href="#menu-list"></use></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="current-list">
+                <div class="list-title">
+                    <h2>Grocery HEB </h2>
+                    <span><span>4</span> items left</span>
+                </div>
+                <div class="list-content">
+                    <div class="category">
+                        <div class="category-title">Vegetables</div>    
+                        <ul>
+                            <li class="item">carrot</li>
+                            <li class="item">tomato</li>
+                            <li class="item">corn</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <div class="category-title">Meat</div> 
+                        <ul class="category">
+                            <li class="item">Beef</li>
+                            <li class="item">Chicken legs</li>
+                            <li class="item">Pork</li>
+                        </ul>                        
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <div class="svgs">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <symbol id="header-menu" class="icons">
+                <symbol id="menu-header" class="icons">
                    <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/> 
                 </symbol>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <symbol id="category-menu" class="icons">
+                <symbol id="menu-category" class="icons">
                     <path d="M13 6h-13v-4h13v4zm0 4h-13v4h13v-4zm0 8h-13v4h13v-4zm3-8l4 5.075 4-5.075h-8z"/>
                 </symbol>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <symbol id="list-menu" class="icons">
+                <symbol id="menu-list" class="icons">
                     <path d="M19 11h-14v-2h14v2zm0 2h-14v2h14v-2zm0 4h-14v2h14v-2zm3-11v16h-20v-16h20zm2-6h-24v24h24v-24z"/>
                 </symbol>   
             </svg>
