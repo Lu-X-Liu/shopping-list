@@ -7,6 +7,23 @@
 
 :root {
     --clr-header-bg: #94BD5F;
+    --clr-text-dark: #314B30;
+    --clr-border-dark: #055303;
+    --clr-text-light: #87A187;
+    --clr-text-bright: #ffffff;
+    --clr-list-title-bg: #23530F;
+    --clr-category-title-bg: #427C29;
+    --clr-item-bg: #F3FFE4;
+    --clr-body-bg: #D4E8BB;
+    --clr-category-menu: #A9F846;
+    --clr-add-new-item: #33A900;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+    background: var(--clr-body-bg);
 }
 
 html {
@@ -14,10 +31,29 @@ html {
     font-size: 1rem;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+}
+
 header .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 0.9rem 7%;
     background: var(--clr-header-bg);
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--clr-text-dark);
+}
+
+.nav svg {
+    width:24px;
+    height:24px;
+}
+
+#header-menu {
+    fill: var(--clr-text-dark);
 }
