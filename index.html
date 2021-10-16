@@ -14,7 +14,7 @@
         <div class="wrapper">
             <h1 class="logo">EZ List</h1>
             <nav class="nav">
-                   <svg><use href="#menu-header"></use></svg>       
+                   <button class="nav-btn"><svg><use href="#menu-header"></use></svg></button>      
             </nav>
         </div>
     </header>
@@ -24,7 +24,7 @@
                 <div class="create-new-list">
                     <h3>Create a new list</h3>
                     <div class="dash-box">
-                        <svg><use href="#plus-initial"></use></svg>
+                        <svg><use href="#plus-icon"></use></svg>
                     </div>
                 </div>
                 <div class="select-existing-list">
@@ -43,17 +43,65 @@
                     <div class="category">
                         <div class="category-title">Vegetables</div>    
                         <ul>
-                            <li class="item">carrot</li>
-                            <li class="item">tomato</li>
-                            <li class="item">corn</li>
+                            <li class="item">
+                                <input type="checkbox" id="item-1">
+                                <label for="item-1">
+                                    <span class="custom-checkbox"></span>     
+                                    carrot
+                                </label>                               
+                            </li>
+                            <li class="item">
+                                <input type="checkbox" id="item-2">
+                                <label for="item-2">
+                                    <span class="custom-checkbox"></span>      
+                                    tomato
+                                </label>                                
+                            </li>                            
+                            <li class="item">
+                                <input type="checkbox" id="item-3">
+                                <label for="item-3">
+                                    <span class="custom-checkbox"></span>     
+                                    broccoli
+                                </label>                                
+                            </li>
                         </ul>
+                        <div class="new-item-creator">
+                            <form action="">
+                                <input type="text"
+                                       class="new new-item"
+                                       placeholder="enter new item"
+                                       aria-label="enter new item">
+                                <button class="new-item-btn" aria-label="create new item">
+                                    <svg class="plus-new-item"><use href="#plus-icon"></use></svg>
+                                </button>
+
+                            </form>
+                        </div>
                     </div>
                     <div class="category">
                         <div class="category-title">Meat</div> 
                         <ul class="category">
-                            <li class="item">Beef</li>
-                            <li class="item">Chicken legs</li>
-                            <li class="item">Pork</li>
+                            <li class="item">
+                                <input type="checkbox" id="item-4">
+                                <label for="item-4">
+                                    <span class="custom-checkbox"></span>      
+                                    beef
+                                </label>                           
+                            </li>
+                            <li class="item">
+                                <input type="checkbox" id="item-5">
+                                <label for="item-5">
+                                    <span class="custom-checkbox"></span>     
+                                    chicken legs
+                                </label>                                
+                            </li>
+                            <li class="item">
+                                <input type="checkbox" id="item-6">
+                                <label for="item-6">
+                                    <span class="custom-checkbox"></span>      
+                                    pork
+                                </label>                               
+                            </li>
                         </ul>                        
                     </div>
                 </div>
@@ -82,22 +130,7 @@
                 </symbol>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <symbol id="plus-initial" class="icons">
-                    <path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/>
-                </symbol>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <symbol id="plus-item" class="icons">
-                    <path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/>
-                </symbol>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <symbol id="plus-list" class="icons">
-                    <path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/>
-                </symbol>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <symbol id="plus-drop-down" class="icons">
+                <symbol id="plus-icon" class="icons">
                     <path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"/>
                 </symbol>
             </svg>
