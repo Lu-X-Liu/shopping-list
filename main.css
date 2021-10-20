@@ -70,6 +70,7 @@ h1 {
     border: none;
     height: 24px;
     width: 24px;
+    padding: 0;
 }
 
 /* main*/
@@ -95,10 +96,10 @@ h1 {
 /* current list*/
 
 .current-list-wrapper {
-    height: calc(100vh - 6.5rem);
+    height: calc(100vh - 6.4rem);
     overflow: scroll;
     position: absolute;
-    top: -0.4rem;
+    top: -0.5rem;
     width: 100%;
     padding: 0 7%;
 }
@@ -305,9 +306,7 @@ input.new-item:focus::placeholder {
 .new-category-btn-wrapper {
     width: 100%;
     padding:0 7% 2rem;
-    display: flex;
-    justify-content: center;
-    display: none
+    display: none;
 }
 
 .new-category-btn {
@@ -316,5 +315,6 @@ input.new-item:focus::placeholder {
     background: transparent;
     border: 2px solid var(--clr-category-menu);
     font-size: 1rem;
-
+    margin: 0.5rem auto 0.9rem;
+    display: block;
 }
