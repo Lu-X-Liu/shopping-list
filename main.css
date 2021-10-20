@@ -37,11 +37,17 @@ html {
     width:24px;
     height:24px;
     fill: var(--clr-text-dark);
+    transition: all 150ms ease-in-out;
 }
 
 button {
     cursor: pointer;
 }
+
+:focus {
+    outline: none;
+}
+
 
 /*header*/
 
@@ -73,11 +79,117 @@ h1 {
     padding: 0;
 }
 
+.nav-btn svg:hover {
+    fill: var(--clr-item-bg);
+}
+
 /* main*/
 
 .main {
     position: relative;
     top: 4rem;
+    height: calc(100% - 4rem);
+}
+    /* nav dropdown */
+
+.nav-dropdown-menu {
+    position: relative;
+    top: -0.5rem;
+    height: calc(100% + 0.5rem);
+    background: rgba(196,196,196,0.55);
+    z-index: 9;
+}
+
+.menu-nav {
+    position: absolute;
+    background: var(--clr-item-bg);
+    right: 0;
+    top: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 80%;
+    height: 100%;
+}
+
+.menu-nav div {
+    margin-top: -1px;
+    position: relative;
+}
+
+.menu-nav div.spacer {
+    padding: 1.5rem;
+}
+
+.menu-nav svg {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    fill: var(--clr-text-dark);
+    margin-left: 1rem;
+}
+
+.menu-nav .trash-icon {
+    width: 18px;
+    height: 18px;  
+}
+
+.menu-nav .go-to-arrow {
+    width: 19px;
+    height: 19px;    
+}
+
+.menu-nav div::after {
+    content: "";
+    position: absolute;
+    right: 0.7rem;
+    left: 0.7rem;
+    bottom: 0;
+    height: 1px;
+    background: currentColor;
+    z-index: 11;
+}
+
+.menu-nav-list-btn {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 2rem;
+}
+
+.menu-nav-list-btn:focus {
+    outline: none;
+}
+
+
+.menu-nav-list-btn:hover,
+.menu-nav-list-btn:focus,
+.menu-nav-list-btn::selection {
+    color: var(--clr-text-bright);
+    background-color: var(--clr-category-title-bg);
+}
+
+.menu-nav-list-btn:hover .icons-d-menu,
+.menu-nav-list-btn:focus .icons-d-menu,
+.menu-nav-list-btn::selection .icons-d-menu {
+    fill: var(--clr-text-bright);    
+}
+
+/* initial UI */
+
+.main-content-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.initial {
+    margin-top: 10vh;
 }
 
 .initial h3 {
@@ -283,7 +395,7 @@ input.new-item:focus::placeholder {
 .add-new-category {
     position: fixed;
     bottom: -10px;
-    z-index: 9;
+    z-index: 8;
     width: 100%;
     background-color: var(--clr-list-title-bg);
     border-radius: 5px;    
