@@ -98,6 +98,7 @@ h1 {
     height: calc(100% + 0.5rem);
     background: rgba(196,196,196,0.55);
     z-index: 9;
+    display: none;
 }
 
 .menu-nav {
@@ -124,7 +125,7 @@ h1 {
     display: inline-block;
     width: 15px;
     height: 15px;
-    fill: var(--clr-text-dark);
+    fill: var(--clr-header-bg);
     margin-left: 1rem;
 }
 

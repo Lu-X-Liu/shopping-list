@@ -3,16 +3,30 @@
 const bottomTabIcon = document.querySelector('.add-new-category svg');
 const newCategoryBtnWrapper = document.querySelector('.new-category-btn-wrapper');
 
-bottomTabIcon.addEventListener('click', toggleBottomTab);
+bottomTabIcon.addEventListener('click', toggleOpenClose, false);
+bottomTabIcon.addEventListener('click', rotateBtn, false);
+bottomTabIcon.menu = newCategoryBtnWrapper;
 
-function toggleBottomTab() {
-    const contentDisplay = newCategoryBtnWrapper.style;
+function toggleOpenClose(evt) {
+    const contentDisplay = evt.currentTarget.menu.style;
     if (contentDisplay.display === 'none' || contentDisplay.display === '') {
-        bottomTabIcon.style.transform = 'rotate(90deg) translateX(-5px)';
         contentDisplay.display = 'block';
     } else {
-        bottomTabIcon.style.transform = 'rotate(-90deg) translateX(5px)';
         contentDisplay.display = 'none';
     }     
 }
 
+function rotateBtn(evt) {
+    const contentDisplay = evt.currentTarget.menu.style;
+    if (contentDisplay.display === 'block' || contentDisplay.display === '') {
+        bottomTabIcon.style.transform = 'rotate(90deg) translateX(-5px)';
+    } else {
+        bottomTabIcon.style.transform = 'rotate(-90deg) translateX(5px)';
+    }    
+}
+
+/* open / close nav menu */
+const headerMenuIcon = document.querySelector('.nav-btn svg');
+const headerMenuDropDown = document.querySelector('.nav-dropdown-menu');
+headerMenuIcon.menu = headerMenuDropDown;
+headerMenuIcon.addEventListener('click', toggleOpenClose);
