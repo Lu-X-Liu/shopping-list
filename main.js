@@ -32,7 +32,17 @@ headerMenuIcon.menu = headerMenuDropDown;
 headerMenuIcon.addEventListener('click', toggleOpenClose);
 
 /* open /close category menu */
-const categoryMenuIcon = document.querySelector('.menu-category');
-const categoryMenuDropDown = document.querySelector('.category-dropdown-menu');
-categoryMenuIcon.menu = categoryMenuDropDown;
-categoryMenuIcon.addEventListener('click', toggleOpenClose);
+const categoryMenuIcons = document.querySelectorAll('.menu-category');
+const categoryMenuDropDowns = document.querySelectorAll('.category-dropdown-menu');
+for(let i = 0; i < categoryMenuIcons.length; i++) {
+    const categoryMenuIcon = categoryMenuIcons[i];
+    for(let j = 0; j < categoryMenuDropDowns.length; j++) {
+        const categoryMenuDropDown = categoryMenuDropDowns[j];
+        if (i === j) {
+            categoryMenuIcon.menu = categoryMenuDropDown;
+            categoryMenuIcon.addEventListener('click', toggleOpenClose);
+        }
+    }
+}
+
+/* add new item */

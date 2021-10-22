@@ -270,9 +270,10 @@ h1 {
     top: 49.38px;
     font-size: 0.9rem;
     width: 90%;
-    background-color: rgb(200, 231, 159);
+    background-color: #92dd73;
     z-index: 9;
     height: calc(100% - 49.38px);
+    min-height: 195px;
     display: none;
 }
 
@@ -349,19 +350,21 @@ li.item::after {
     width: 24px;
     height: 24px;
     fill: var(--clr-add-new-item);
+    transform: translateY(-0.2rem);
 }
 
 input.new-item {
     background: transparent;
     border: none;
     font-size: 1.25rem;
-    padding: 0.4rem 1rem 0.7rem;
+    padding: 0.4rem 1.5rem 0.7rem 1rem;
     margin-bottom: 1rem;
     outline: none;
     order: 2;
     border-bottom: 2px solid var(--clr-border-dark);
     transition: 150ms ease-in-out;
     width: calc(100% - 4.2rem);
+    color: var(--clr-text-dark);
 }
 
 input.new-item:focus {
@@ -374,6 +377,21 @@ input.new-item::placeholder {
 
 input.new-item:focus::placeholder {
     opacity: 0.3;
+}
+
+.close-add-new-item {
+    order: 3;
+    background: transparent;
+    border: 0;
+    height: 14px;
+    width: 14px;
+    padding:0;
+    margin-top: 0.7rem;
+    transform: translateX(-0.8rem);
+}
+
+.close-circle {
+    fill: var(--clr-text-light);
 }
 
 [type="checkbox"] {

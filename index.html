@@ -15,7 +15,7 @@
         <div class="wrapper">
             <h1 class="logo">EZ List</h1>
             <nav class="nav">
-                   <button class="nav-btn"><svg><use href="#menu-header"></use></svg></button>      
+                   <button class="nav-btn" aria-label="navigation menu icon"><svg><use href="#menu-header"></use></svg></button>      
             </nav>
         </div>       
     </header>
@@ -100,7 +100,7 @@
                         <div class="category">
                             <div class="category-title">
                                 <h3>Vegetables</h3>
-                                <svg class="menu-category" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">                                    
+                                <svg class="menu-category" aria-label="category menu icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">                                    
                                         <path d="M13 6h-13v-4h13v4zm0 4h-13v4h13v-4zm0 8h-13v4h13v-4zm3-8l4 5.075 4-5.075h-8z"/>
                                 </svg>
                             </div>
@@ -112,7 +112,7 @@
                                 </div>
                                 <div class='menu-category-list menu-list'>
                                     <button class="menu-category-list-btn menu-list_btn">
-                                        Fold current category
+                                        Hide current category
                                     </button>
                                 </div>
                                 <div class='menu-category-list menu-list'>
@@ -158,16 +158,43 @@
                                     <button class="new-item-btn" aria-label="create new item">
                                         <svg class="plus-new-item"><use href="#plus-icon"></use></svg>
                                     </button>
+                                    <button class="close-add-new-item" aria-label="close add new item input form">
+                                        <svg class="close-circle" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                                                <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 16.538l-4.592-4.548 4.546-4.587-1.416-1.403-4.545 4.589-4.588-4.543-1.405 1.405 4.593 4.552-4.547 4.592 1.405 1.405 4.555-4.596 4.591 4.55 1.403-1.416z"/>                                            
+                                        </svg>
+                                    </button>
                                 </form>
                             </div>
                         </div>
                         <div class="category">
                             <div class="category-title">
                                 <h3>Meat</h3>
-                                <svg class="menu-category" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">                                    
+                                <svg class="menu-category" aria-label="category menu icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">                                    
                                     <path d="M13 6h-13v-4h13v4zm0 4h-13v4h13v-4zm0 8h-13v4h13v-4zm3-8l4 5.075 4-5.075h-8z"/>
                                 </svg>
                             </div> 
+                            <div class="category-dropdown-menu menu-content">
+                                <div class='menu-category-list menu-list'>
+                                    <button class="menu-category-list-btn menu-list_btn">
+                                        Add new item
+                                    </button>
+                                </div>
+                                <div class='menu-category-list menu-list'>
+                                    <button class="menu-category-list-btn menu-list_btn">
+                                        Hide current category
+                                    </button>
+                                </div>
+                                <div class='menu-category-list menu-list'>
+                                    <button class="menu-category-list-btn menu-list_btn">
+                                        Rename current category
+                                    </button>
+                                </div>
+                                <div class='menu-category-list menu-list'>
+                                    <button class="menu-category-list-btn menu-list_btn">
+                                        Delete current category 
+                                    </button>    
+                                </div>
+                            </div>
                             <ul class="items">
                                 <li class="item">
                                     <input type="checkbox" id="item-4">
@@ -231,11 +258,6 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <symbol id="close-header-menu" class="icons">
                 <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
-                </symbol>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <symbol id="close-circle" class="icons">
-                    <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 16.538l-4.592-4.548 4.546-4.587-1.416-1.403-4.545 4.589-4.588-4.543-1.405 1.405 4.593 4.552-4.547 4.592 1.405 1.405 4.555-4.596 4.591 4.55 1.403-1.416z"/>
                 </symbol>
             </svg>
     </div>
