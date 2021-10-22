@@ -30,3 +30,9 @@ const headerMenuIcon = document.querySelector('.nav-btn svg');
 const headerMenuDropDown = document.querySelector('.nav-dropdown-menu');
 headerMenuIcon.menu = headerMenuDropDown;
 headerMenuIcon.addEventListener('click', toggleOpenClose);
+
+/* open /close category menu */
+const categoryMenuIcon = document.querySelector('.menu-category');
+const categoryMenuDropDown = document.querySelector('.category-dropdown-menu');
+categoryMenuIcon.menu = categoryMenuDropDown;
+categoryMenuIcon.addEventListener('click', toggleOpenClose);
