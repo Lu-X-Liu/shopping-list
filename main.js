@@ -18,7 +18,7 @@ function toggleOpenClose(evt) {
 
 function rotateBtn(evt) {
     const contentDisplay = evt.currentTarget.menu.style;
-    if (contentDisplay.display === 'block' || contentDisplay.display === '') {
+    if (contentDisplay.display === 'block') {
         bottomTabIcon.style.transform = 'rotate(90deg) translateX(-5px)';
     } else {
         bottomTabIcon.style.transform = 'rotate(-90deg) translateX(5px)';
@@ -31,7 +31,7 @@ const headerMenuDropDown = document.querySelector('.nav-dropdown-menu');
 headerMenuIcon.menu = headerMenuDropDown;
 headerMenuIcon.addEventListener('click', toggleOpenClose);
 
-/* open /close category menu */
+/* open / close category menu */
 const categoryMenuIcons = document.querySelectorAll('.menu-category');
 const categoryMenuDropDowns = document.querySelectorAll('.category-dropdown-menu');
 for(let i = 0; i < categoryMenuIcons.length; i++) {
