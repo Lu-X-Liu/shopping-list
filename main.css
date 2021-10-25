@@ -117,6 +117,7 @@ h1 {
 .menu-content div {
     margin-top: -1px;
     position: relative;
+    transform-style: preserve-3d;
 }
 
 .menu-content div.spacer {
@@ -163,6 +164,8 @@ h1 {
     display: flex;
     align-items: center;
     padding: 0.9rem 2rem;
+    position: relative;
+    z-index: 11;
 }
 
 .menu-nav-list-btn:focus {
@@ -184,24 +187,32 @@ h1 {
 }
 
 /* existing list menu */
-.existing-list {
+.existing-list-container {
     position: absolute;
     z-index: 13;
     right: 0;
     left: -0.7rem;
     height: calc(100vh - 18.5rem);
-    background: transparent;
     list-style: none;
     font-size: 1rem;
     font-weight: 500;
     padding: 0;
     transform: translateY(-1px);
     box-shadow: 0 0 0.7rem 0 var(--clr-border-dark);
-    background-color: transparent;
-    /*overflow: scroll;*/
+    padding-top: 1rem;
+    background: var(--clr-menu-bg-intense);
+    transform: translateZ(1px);
 }
 
-.list-name:first-child::before {
+.existing-list {
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    overflow: scroll;
+    left: 0;
+}
+
+.existing-list-container::before {
     content: '';
     position: absolute;
     top: -0.4rem;
@@ -209,7 +220,7 @@ h1 {
     height: 2.7rem;
     width: 2.7rem;
     background-color: var(--clr-menu-bg-intense);
-    transform: rotate(45deg) translateZ(-1px);
+    transform: rotate(45deg);
 }
 
 .list-name {
@@ -220,8 +231,6 @@ h1 {
     padding: 0.9rem 0.7rem 0.9rem 3.5rem;
     z-index:14;
     cursor: pointer;
-    transform-style: preserve-3d;
-    background: var(--clr-menu-bg-intense);
 }
 
 .list-name span {
